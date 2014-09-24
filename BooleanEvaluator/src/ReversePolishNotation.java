@@ -14,6 +14,11 @@ public class ReversePolishNotation {
 		pos = 0;
 	}
 	
+	public char[] getNotation()
+	{
+		return notation;
+	}
+	
 	public void addToOutput(char c) throws Exception
 	{
 		if(pos >= notation.length)

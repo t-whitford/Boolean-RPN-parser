@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 
 public class Main {
@@ -7,16 +8,17 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	
-		System.out.println("Enter the boolean expression (please use # as the symbol for XOR) :");
-		Scanner scanner = new Scanner(System.in);
-		//String inp = scanner.nextLine();
-	
 		ReversePolishNotation rpn = null;
 		
 		try {
 			rpn = ReversePolishNotation.parseInput("(A#B).C + A.B");
-			//rpn = ReversePolishNotation.parseInput(inp);
 			rpn.print();
+			
+			TreeMap<Character, Boolean> map = new TreeMap<>();
+			map.put('A', true);
+			map.put('B', false);
+			
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());

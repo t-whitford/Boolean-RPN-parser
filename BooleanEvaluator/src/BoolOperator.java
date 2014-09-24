@@ -36,4 +36,12 @@ public enum BoolOperator {
 			throw new Exception("Unknown character " + c);
 		}
 	}
+	
+	public static boolean isOperator(char c)
+	{
+		if(c == '!' || c == '#' || c == '+' || c == '.')
+			return true;
+		else
+			return false;
+	}
 }
